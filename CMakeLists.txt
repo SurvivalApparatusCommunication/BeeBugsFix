@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
 
-project(plugin)
+project(BeeBugsFix)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_BUILD_TYPE Release)
@@ -13,6 +13,7 @@ file(GLOB_RECURSE SRC_FILES_DIR
 
 include_directories(
     ${CMAKE_SOURCE_DIR}/SDK/include
+    ${CMAKE_SOURCE_DIR}/SDK/include/llapi
 )
 
 link_directories(
@@ -73,4 +74,8 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
 
 add_custom_command(TARGET ${CMAKE_PROJECT_NAME} PRE_BUILD
     COMMAND cmd /c ${PROJECT_SOURCE_DIR}/prepare_libraries.cmd ${PROJECT_SOURCE_DIR}
+)
+
+add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
+    COMMAND cmd /c ${PROJECT_SOURCE_DIR}/runbds.bat ${CMAKE_PROJECT_NAME}
 )

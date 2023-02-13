@@ -18,16 +18,16 @@
 // Please FILL UP the content in this area before developing your plugin, and DO NOT modify any code
 // outside this area.
 
-static_assert(false, "Please modify your plugin information below and delete this line!");
+// static_assert(false, "Please modify your plugin information below and delete this line!");
 
 // The basic descriptions of your plugin
 // Note that the the plugin name CAN ONLY CONTAIN Enlish alphabet, digit, dash(-) and
-// underscore(_). 
-#define PLUGIN_NAME "HelloWorldPrinter"
+// underscore(_).
+#define PLUGIN_NAME "BeeBugsFix"
 // Describe what your plugin does
 // We recommend you start the introduction with a third-person singular verb.
-#define PLUGIN_INTRODUCTION "Prints \"Hello, World!\" in the console."
-#define PLUGIN_AUTHOR "Me"
+#define PLUGIN_INTRODUCTION "BeeBugsFix"
+#define PLUGIN_AUTHOR "OEOTYAN"
 
 // The version of your plugin. If you do not know how to set it, please refer
 // to https://semver.org/ .
@@ -78,7 +78,7 @@ static_assert(false, "Please modify your plugin information below and delete thi
 
 #define FILE_VERSION_BLOCK_HEADER 0x04004B0L
 #define FILE_VERSION_COMPANY_NAME PLUGIN_AUTHOR
-#define FILE_VERSION_LEGAL_COPYRIGHT "Copyright (C) 2022"
+#define FILE_VERSION_LEGAL_COPYRIGHT "Copyleft 2023"
 #define FILE_VERSION_FILE_DESCRIPTION PLUGIN_INTRODUCTION
 #define FILE_VERSION_FILE_VERSION_STRING PLUGIN_FILE_VERSION_STRING
 #define FILE_VERSION_INTERNAL_NAME PLUGIN_NAME
